@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import Input from "./Input";
+import Messages from "./Messages";
 
 const Chat = () => {
   return (
@@ -7,21 +9,23 @@ const Chat = () => {
         <span>Dadhi</span>
         <div className="chatIcon">
           <img
-            src="https://cdn-icons-png.flaticon.com/32/8353/8353783.png"
+            src="https://cdn-icons-png.flaticon.com/128/8353/8353783.png"
             alt="Camera"
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/32/3683/3683218.png"
+            src="https://cdn-icons-png.flaticon.com/128/3683/3683218.png"
             alt="Add friend"
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/32/512/512142.png"
+            src="https://cdn-icons-png.flaticon.com/128/512/512142.png"
             alt="More"
           />
         </div>
       </div>
+      <Messages />
+      <Input />
     </div>
   );
-}
+};
 
-export default Chat
+export default Chat;

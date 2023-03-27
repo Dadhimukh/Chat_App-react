@@ -70,7 +70,7 @@
    margin: 0;
    }
    .home {
-   background-color: rgba(161, 239, 161, 0.948);
+   background-color: rgba(255, 5, 243, 0.151);
    height: 100vh;
    display: flex;
    align-items: center;
@@ -86,7 +86,7 @@
 
       .sidebar {
          flex: 1;
-         background-color: beige;
+         background-color: rgba(247, 173, 63, 0.93);
 
          .navbar {
          display: flex;
@@ -94,7 +94,7 @@
          justify-content: space-between;
          height: 25px;
          padding: 10px;
-         background-color: blanchedalmond;
+         background-color: rgb(234, 146, 15);
 
          .logo {
             font-weight: bold;
@@ -118,28 +118,32 @@
          }
 
          button {
-            background-color: aquamarine;
+            background-color: rgba(247, 53, 53, 0.793);
             border: none;
             font-size: 10px;
             cursor: pointer;
             height: 25px;
-            font-weight: 500;
+            font-weight: 700;
+            border-radius: 5px;
+            color: #fff;
          }
          }
 
          .search {
-         border-bottom: 1px solid rgb(167, 150, 150);
+         border-bottom: 1px solid rgb(157, 90, 2);
 
          .searchForm {
             padding: 10px;
             input {
                border: none;
-               background-color: transparent;
+               background-color: rgb(249, 186, 99);
                outline: none;
                width: 100%;
+               height: 20px;
+               margin: 0;
 
                &::placeholder {
-               color: rgba(2, 107, 107, 0.825);
+               color: rgba(85, 61, 4, 0.773);
                }
             }
          }
@@ -152,7 +156,7 @@
          cursor: pointer;
 
          &:hover {
-            background-color: rgb(247, 231, 209);
+            background-color: rgb(234, 146, 15);
          }
          img {
             height: 50px;
@@ -174,40 +178,79 @@
          }
       }
 
-
-
-
-
-
-
       .chat {
          flex: 2;
          background-color: azure;
 
+         .chatInfo {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 10px;
+         background-color: rgb(234, 146, 15);
+         height: 25px;
 
-         .chatInfo{
-            display:flex;
-            align-items:center;
-            justify-content: space-between;
-            padding: 10px;
-            background-color: burlywood;
-            height: 25px;
+         span {
+            font-size: 16px;
+            font-weight: 700;
+         }
 
+         .chatIcon {
+            display: flex;
+            gap: 10px;
 
-            span{
-               font-size: 16px;
-               font-weight: 700;
+            img {
+               height: 20px;
+               cursor: pointer;
+            }
+         }
+         }
+
+         .messages {
+         background-color: rgba(251, 148, 14, 0.56);
+         padding: 10px;
+         height: calc(100% - 110px);
+         }
+         .input {
+         background-color: rgb(249, 186, 99);
+         padding: 10px;
+         height: 25px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         input {
+            border: none;
+            outline: none;
+            width: 100%;
+            color: rgb(98, 98, 98);
+            font-size: 18px;
+            background-color: rgb(249, 186, 99);
+
+            &::placeholder {
+               color: #767676;
+            }
+         }
+
+         .send {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+               height: 25px;
+               cursor: pointer;
             }
 
-            .chatIcon{
-               display: flex;
-               gap: 10px;
-
-               img{
-                  height: 20px;
-                  cursor: pointer;
-               }
+            button {
+               border: none;
+               padding: 8px 10px;
+               color: white;
+               background-color: rgba(10, 10, 247, 0.641);
+               cursor: pointer;
+               border-radius: 10px;
             }
+         }
          }
       }
    }
