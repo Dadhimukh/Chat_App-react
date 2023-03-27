@@ -65,3 +65,102 @@
       }
    }
    }
+
+   body {
+   margin: 0;
+   }
+   .home {
+   background-color: rgba(161, 239, 161, 0.948);
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .container {
+      border: 1px solid #fff;
+      border-radius: 10px;
+      height: 80%;
+      width: 60%;
+      display: flex;
+      overflow: hidden;
+
+      .sidebar {
+         flex: 1;
+         background-color: beige;
+
+         .navbar {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         height: 25px;
+         padding: 10px;
+         background-color: blanchedalmond;
+
+         .logo {
+            font-weight: bold;
+         }
+
+         .user {
+            display: flex;
+            gap: 10px;
+         }
+
+         img {
+            background-color: beige;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+
+         button {
+            background-color: aquamarine;
+            border: none;
+            font-size: 10px;
+            cursor: pointer;
+            height: 25px;
+            font-weight: 500;
+         }
+         }
+
+         .search {
+         border-bottom: 1px solid rgb(167, 150, 150);
+
+         .searchForm {
+            padding: 10px;
+            input {
+               border: none;
+               background-color: transparent;
+               outline: none;
+
+               &::placeholder {
+               color: rgba(2, 107, 107, 0.825);
+               }
+            }
+         }
+
+         .userChat {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            &:hover {
+               background-color: rgb(247, 231, 209);
+            }
+            img {
+               height: 50px;
+               width: 50px;
+               border-radius: 50%;
+               object-fit: cover;
+            }
+         }
+         }
+      }
+      .chat {
+         flex: 2;
+         background-color: azure;
+      }
+   }
+   }
