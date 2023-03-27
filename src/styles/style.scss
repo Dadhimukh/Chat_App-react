@@ -112,6 +112,7 @@
       .sidebar {
          flex: 1;
          background-color: rgba(247, 173, 63, 0.93);
+         position: relative;
 
          .navbar {
          display: flex;
@@ -154,6 +155,10 @@
             font-weight: 700;
             border-radius: 5px;
             color: #fff;
+            @include tablet {
+               position: absolute;
+               bottom: 10px;
+            }
          }
          }
 
@@ -193,6 +198,10 @@
             object-fit: cover;
          }
          .userChatInfo {
+            @include mobile() {
+               display: none;
+            }
+
             span {
                font-size: 18px;
                font-weight: 500;
