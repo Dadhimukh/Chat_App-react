@@ -113,6 +113,10 @@
             object-fit: cover;
          }
 
+         span {
+            margin-top: 7px;
+         }
+
          button {
             background-color: aquamarine;
             border: none;
@@ -132,28 +136,39 @@
                border: none;
                background-color: transparent;
                outline: none;
+               width: 100%;
 
                &::placeholder {
                color: rgba(2, 107, 107, 0.825);
                }
             }
          }
-
+         }
          .userChat {
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
+         padding: 10px;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
 
-            &:hover {
-               background-color: rgb(247, 231, 209);
+         &:hover {
+            background-color: rgb(247, 231, 209);
+         }
+         img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+         .userChatInfo {
+            span {
+               font-size: 18px;
+               font-weight: 500;
             }
-            img {
-               height: 50px;
-               width: 50px;
-               border-radius: 50%;
-               object-fit: cover;
+            p {
+               margin: 0;
+               font-size: 14px;
+               color: rgb(86, 85, 85);
             }
          }
          }
