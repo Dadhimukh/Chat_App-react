@@ -1,0 +1,67 @@
+   .formContainer {
+   background-color: aliceblue;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .formWrapper {
+      background-color: #fff;
+      padding: 20px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      border-radius: 10px;
+
+      .logo {
+         color: rgb(50, 50, 244);
+         font-size: 32px;
+         font-weight: 500;
+      }
+
+      .title {
+         color: rgb(51, 156, 248);
+         font-size: 18px;
+      }
+      form {
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+
+         input {
+         padding: 15px;
+         width: 250px;
+         border: none;
+         border-bottom: 1px solid rgb(122, 122, 236);
+         &::placeholder {
+            color: rgb(122, 122, 236);
+         }
+         }
+
+         button {
+         padding: 10px;
+         font-weight: bold;
+         border: none;
+         cursor: pointer;
+         color: #fff;
+         background-color: rgb(51, 117, 248);
+         }
+
+         label {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         font-size: 12px;
+         color: rgb(51, 156, 248);
+         cursor: pointer;
+         }
+      }
+
+      p {
+         color: rgb(51, 156, 248);
+         font-size: 12px;
+         margin-top: 10px;
+      }
+   }
+   }
