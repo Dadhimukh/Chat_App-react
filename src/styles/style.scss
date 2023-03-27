@@ -173,9 +173,42 @@
          }
          }
       }
+
+
+
+
+
+
+
       .chat {
          flex: 2;
          background-color: azure;
+
+
+         .chatInfo{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: burlywood;
+            height: 25px;
+
+
+            span{
+               font-size: 16px;
+               font-weight: 700;
+            }
+
+            .chatIcon{
+               display: flex;
+               gap: 10px;
+
+               img{
+                  height: 20px;
+                  cursor: pointer;
+               }
+            }
+         }
       }
    }
    }
