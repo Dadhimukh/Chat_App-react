@@ -1,6 +1,6 @@
 import React from 'react'
-import Register from './components/Register'
-import Login from "./components/Login"
+import Register from './pages/Register'
+import Login from "./pages/Login"
 
 const App = () => {
   return (
