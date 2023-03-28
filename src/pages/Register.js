@@ -3,12 +3,17 @@
    import { auth, storage, db } from "../firebase";
    import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
    import { doc, setDoc } from "firebase/firestore";
+   import { useNavigate } from "react-router-dom";
+
 
    import "../styles/style.scss";
 
    const Register = () => {
    // useState hook for set the errors, at inititals sate it was flase
    const [err, setErr] = useState(false);
+
+   // Using navigate hook for navigating
+   const navigate = useNavigate();
 
    // handleSubmit after click on singUp button
    const handleSubmit = async (e) => {
@@ -48,6 +53,8 @@
                });
                // storing the userChats in fireabase
                await setDoc(doc(db, "userChats", res.user.uid), {});
+               // going Home page after getting successfull singUp operation
+               navigate("/")
             });
          }
          );
