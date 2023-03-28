@@ -6,8 +6,10 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 
 const App = () => {
+  // showing the detail of current user by using AuthContext
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
+
   return (
     <div>
       <BrowserRouter>
