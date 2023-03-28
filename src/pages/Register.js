@@ -1,28 +1,25 @@
-   import React from "react";
+   import React, { useState } from "react";
    import { createUserWithEmailAndPassword } from "firebase/auth";
    import { auth } from "../firebase";
 
    import "../styles/style.scss";
 
    const Register = () => {
-   const handleSubmit = (e) => {
+
+      const [err, setErr] = useState(false)
+   const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(e.target[0].value);
       const displayName = e.target[0].value;
       const email = e.target[1].value;
       const password = e.target[2].value;
       const file = e.target[3].files[0];
 
-      createUserWithEmailAndPassword(auth, email, password)
-         .then((userCredential) => {
-         // Signed in
-         const user = userCredential.user;
-         console.log(user, "not found");
-         // ...
-         })
-         .catch((error) => {
-         // ..
-         });
+      try{
+
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      }catch(err){
+         setErr(true)
+      }
    };
    return (
       <div className="formContainer">
@@ -42,6 +39,7 @@
                <span>Add an avatar</span>
             </label>
             <button>Sing Up</button>
+            {err && <span>Somthing Went Wrong</span>}
          </form>
          <p>You do have an account? Login</p>
          </div>
