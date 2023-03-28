@@ -13,7 +13,7 @@ const Input = () => {
         <label htmlFor="file">
           <img
             src="https://cdn-icons-png.flaticon.com/128/6499/6499530.png"
-            alt="Image"
+            alt="AddImage"
           />
         </label>
         <button>Send</button>
