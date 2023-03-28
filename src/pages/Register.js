@@ -7,15 +7,20 @@
    import "../styles/style.scss";
 
    const Register = () => {
+   // useState hook for set the errors, at inititals sate it was flase
    const [err, setErr] = useState(false);
+
+   // handleSubmit after click on singUp button
    const handleSubmit = async (e) => {
       e.preventDefault();
+      // Registeration form input details
       const displayName = e.target[0].value;
       const email = e.target[1].value;
       const password = e.target[2].value;
       const file = e.target[3].files[0];
 
       try {
+         // Authentication details of users for singUp
          const res = await createUserWithEmailAndPassword(auth, email, password);
 
          const storageRef = ref(storage, displayName);
@@ -28,21 +33,26 @@
             setErr(true);
          },
          () => {
+            // storing the URL of users image with name for downloading that images from firebaseStore
             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
                await updateProfile(res.user, {
                displayName,
                photoURL: downloadURL,
                });
+               // storing the users details in firebase
                await setDoc(doc(db, "users", res.user.uid), {
                uid: res.user.uid,
                displayName,
                email,
                photoURL: downloadURL,
                });
+               // storing the userChats in fireabase
+               await setDoc(doc(db, "userChats", res.user.uid), {});
             });
          }
          );
       } catch (err) {
+         // setiting Error as true
          setErr(true);
       }
    };
@@ -64,6 +74,7 @@
                <span>Add an avatar</span>
             </label>
             <button>Sing Up</button>
+            {/* Showing the error */}
             {err && <span>Somthing Went Wrong</span>}
          </form>
          <p>You do have an account? Login</p>
