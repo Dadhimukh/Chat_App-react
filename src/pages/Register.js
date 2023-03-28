@@ -1,7 +1,8 @@
    import React, { useState } from "react";
    import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-   import { auth, storage } from "../firebase";
+   import { auth, storage, db } from "../firebase";
    import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+   import { doc, setDoc } from "firebase/firestore";
 
    import "../styles/style.scss";
 
@@ -30,6 +31,12 @@
             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
                await updateProfile(res.user, {
                displayName,
+               photoURL: downloadURL,
+               });
+               await setDoc(doc(db, "users", res.user.uid), {
+               uid: res.user.uid,
+               displayName,
+               email,
                photoURL: downloadURL,
                });
             });
