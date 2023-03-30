@@ -15,6 +15,7 @@ const App = () => {
     if (!currentUser) {
       return <Navigate to="/login" />;
     }
+    // returning home page if user is loged in
     return children
   };
 

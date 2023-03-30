@@ -5,7 +5,6 @@
    import { doc, setDoc } from "firebase/firestore";
    import { Link, useNavigate } from "react-router-dom";
 
-
    import "../styles/style.scss";
 
    const Register = () => {
@@ -54,7 +53,7 @@
                // storing the userChats in fireabase
                await setDoc(doc(db, "userChats", res.user.uid), {});
                // going Home page after getting successfull singUp operation
-               navigate("/")
+               navigate("/");
             });
          }
          );
@@ -64,31 +63,31 @@
       }
    };
    return (
-     <div className="formContainer">
-       <div className="formWrapper">
+      <div className="formContainer">
+         <div className="formWrapper">
          <span className="logo">Chat App</span>
          <span className="title">Register</span>
          <form onSubmit={handleSubmit}>
-           <input type="text" placeholder="Enter your Name" />
-           <input type="email" placeholder="Enter your Email" />
-           <input type="password" placeholder="Password" />
-           <input style={{ display: "none" }} type="file" id="file" />
-           <label htmlFor="file">
-             <img
+            <input type="text" placeholder="Enter your Name" />
+            <input type="email" placeholder="Enter your Email" />
+            <input type="password" placeholder="Password" />
+            <input style={{ display: "none" }} type="file" id="file" />
+            <label htmlFor="file">
+               <img
                src="https://cdn-icons-png.flaticon.com/32/1057/1057240.png"
                alt=""
-             />
-             <span>Add an avatar</span>
-           </label>
-           <button>Sing Up</button>
-           {/* Showing the error */}
-           {err && <span>Somthing Went Wrong</span>}
+               />
+               <span>Add an avatar</span>
+            </label>
+            <button>Sing Up</button>
+            {/* Showing the error */}
+            {err && <span>Somthing Went Wrong</span>}
          </form>
          <p>
-           You do have an account? <Link to="/login">Login</Link>
+            You do have an account? <Link to="/login">Login</Link>
          </p>
-       </div>
-     </div>
+         </div>
+      </div>
    );
    };
 

@@ -18,7 +18,7 @@ const Login = () => {
     const password = e.target[1].value;
 
     try {
-      // checking for email and password and if everything is ok then navigate the login page
+      // checking for email and password and if everything is ok then navigate the Home page
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (err) {
