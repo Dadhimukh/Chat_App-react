@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -20,7 +20,7 @@ const Login = () => {
     try {
       // checking for email and password and if everything is ok then navigate the login page
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/login");
+      navigate("/");
     } catch (err) {
       // setiting Error as true
       setErr(true);
@@ -39,7 +39,7 @@ const Login = () => {
           {/* Showing the error */}
           {err && <span>Somthing Went Wrong</span>}
         </form>
-        <p>You do not have an account? Sing Up</p>
+        <p>You do not have an account? <Link to="/register">Register</Link> </p>
       </div>
     </div>
   );
