@@ -9,13 +9,19 @@
 
    // checking the authenticated user and updating as current user
    useEffect(() => {
-      onAuthStateChanged(auth, (user) => {
+      const unsub = onAuthStateChanged(auth, (user) => {
          setCurrentUser(user);
          console.log(user);
       });
+
+      return () => {
+         unsub();
+      };
    }, []);
 
-   <AuthContext.Provider value={{ currentUser }}>
-      {children}
-   </AuthContext.Provider>;
+   return (
+      <AuthContext.Provider value={{ currentUser }}>
+         {children}
+      </AuthContext.Provider>
+   );
    };
