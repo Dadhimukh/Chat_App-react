@@ -80,10 +80,10 @@ const Input = () => {
         value={text}
       />
       <div className="send">
-        <img
+        {/* <img
           src="https://cdn-icons-png.flaticon.com/128/2908/2908214.png"
           alt="Attach"
-        />
+        /> */}
         <input
           type="file"
           style={{ display: "none" }}
