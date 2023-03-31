@@ -11,14 +11,17 @@ const Navbar = () => {
       <span className="logo">Chat App</span>
       <div className="user">
         <img
-        // showing the currentUser photo
+          // showing the currentUser photo
           src={currentUser.photoURL}
           alt=""
         />
         {/* showing the current userName */}
         <span>{currentUser.displayName}</span>
         {/* using Firebase for signOut functionality onClick logout */}
-        <button onClick={() => signOut(auth)}>Logout</button>
+        <button onClick={() => signOut(auth)}>
+          {" "}
+          <img src="https://cdn-icons-png.flaticon.com/128/4436/4436954.png" />
+        </button>
       </div>
     </div>
   );
