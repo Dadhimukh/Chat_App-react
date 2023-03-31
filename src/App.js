@@ -4,6 +4,7 @@ import { AuthContext } from "./context/AuthContext";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import "./styles/style.scss"
 
 const App = () => {
   // showing the detail of current user by using AuthContext
