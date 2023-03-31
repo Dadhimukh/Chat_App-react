@@ -53,7 +53,7 @@
                // storing the userChats in fireabase
                await setDoc(doc(db, "userChats", res.user.uid), {});
                // going Home page after getting successfull singUp operation
-               navigate("/");
+               navigate("/login");
             });
          }
          );
