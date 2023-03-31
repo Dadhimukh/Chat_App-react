@@ -96,7 +96,9 @@ const Input = () => {
             alt="AddImage"
           />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleSend}>
+          <img src="https://cdn-icons-png.flaticon.com/128/3682/3682321.png" />
+        </button>
       </div>
     </div>
   );
