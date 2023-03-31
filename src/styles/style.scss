@@ -88,8 +88,9 @@
    margin: 0;
    }
    .home {
-   background-color: rgba(255, 5, 243, 0.151);
+   background-color: #125eb5;
    height: 100vh;
+   width: 100vw;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -97,8 +98,8 @@
    .container {
       border: 1px solid #fff;
       border-radius: 10px;
-      height: 80%;
-      width: 60%;
+      height: 99%;
+      width: 100%;
       display: flex;
       overflow: hidden;
       @include tablet {
@@ -108,10 +109,10 @@
          width: 100%;
          height: 100%;
       }
-
+      // SIDEBAR SECTION STYLING
       .sidebar {
          flex: 1;
-         background-color: rgba(247, 173, 63, 0.93);
+         background-color: #125eb5;
          position: relative;
 
          .navbar {
@@ -120,10 +121,12 @@
          justify-content: space-between;
          height: 25px;
          padding: 10px;
-         background-color: rgb(234, 146, 15);
+         background-color: #063e7c;
 
          .logo {
             font-weight: bold;
+            font-size: 24px;
+            color: #fff;
             @include tablet {
                display: none;
             }
@@ -131,11 +134,17 @@
 
          .user {
             display: flex;
-            gap: 10px;
+            align-items: center;
+            gap: 8px;
+
+            .userName{
+               color: #fff;
+               letter-spacing: 0.5px;
+            }
          }
 
          img {
-            background-color: beige;
+            background-color: rgb(14, 14, 13);
             height: 32px;
             width: 32px;
             border-radius: 50%;
@@ -147,40 +156,40 @@
          }
 
          button {
-            background-color: rgba(247, 53, 53, 0.793);
-            border: none;
-            font-size: 10px;
+            background-color: #063e7c;
+            border-radius: 50%;
+            border-style: none;
             cursor: pointer;
-            height: 25px;
-            font-weight: 700;
-            border-radius: 5px;
-            color: #fff;
-            @include tablet {
+            // height: 35px;
+            // width: 3px;
+            @include mobile {
                position: absolute;
-               bottom: 10px;
+               left: 4px;
             }
          }
          }
-
+         // SEARCH SECTION
          .search {
-         border-bottom: 1px solid rgb(157, 90, 2);
+         border-bottom: 1px solid #94c1f4;
 
          .searchForm {
             padding: 10px;
             input {
                border: none;
-               background-color: rgb(249, 186, 99);
+               background-color: #1365c294;
                outline: none;
                width: 100%;
                height: 20px;
                margin: 0;
+               color: #fff;
 
                &::placeholder {
-               color: rgba(85, 61, 4, 0.773);
+               color: #8a95b6;
                }
             }
          }
          }
+         // USER DETAILS SECTION
          .userChat {
          padding: 10px;
          display: flex;
@@ -189,7 +198,7 @@
          cursor: pointer;
 
          &:hover {
-            background-color: rgb(234, 146, 15);
+            background-color: #063e7c;
          }
          img {
             height: 50px;
@@ -203,18 +212,20 @@
             }
 
             span {
-               font-size: 18px;
+               font-size: 20px;
                font-weight: 500;
+               color: #fff;
             }
             p {
                margin: 0;
-               font-size: 14px;
-               color: rgb(86, 85, 85);
+               font-size: 15px;
+               color: #d3dbed;
+               letter-spacing: 0.5px;
             }
          }
          }
       }
-
+      // CHAT SECTIONS STYLING
       .chat {
          flex: 2;
          background-color: azure;
@@ -224,12 +235,13 @@
          align-items: center;
          justify-content: space-between;
          padding: 10px;
-         background-color: rgb(234, 146, 15);
+         background-color: #063e7c;
          height: 25px;
 
          span {
             font-size: 16px;
             font-weight: 700;
+            color: #fff;
          }
 
          .chatIcon {
@@ -242,9 +254,9 @@
             }
          }
          }
-
+         // MESSAGE SECTION STYLING
          .messages {
-         background-color: rgba(251, 148, 14, 0.56);
+         background-color: #125eb5c1;
          padding: 10px;
          height: calc(100% - 110px);
          overflow-y: scroll;
@@ -258,7 +270,7 @@
                display: flex;
                flex-direction: column;
                font-weight: 300;
-               color: #767676;
+               color: #0d0d39a9;
                img {
                width: 40px;
                height: 40px;
@@ -289,15 +301,15 @@
                align-items: flex-end;
                p {
                   background-color: rgb(181, 251, 181);
-                  color: #0c31ec;
                   border-radius: 10px 0 10px 10px;
                }
                }
             }
          }
          }
+         // INPUT SECTION STYLING
          .input {
-         background-color: rgb(249, 186, 99);
+         background-color: rgb(245, 247, 248);
          padding: 10px;
          height: 25px;
          display: flex;
@@ -307,20 +319,20 @@
          input {
             border: none;
             outline: none;
-            width: 100%;
+            width: 89%;
             color: rgb(98, 98, 98);
             font-size: 18px;
-            background-color: rgb(249, 186, 99);
+            background-color: rgb(245, 247, 248);
 
             &::placeholder {
-               color: #767676;
+               color: #41414d;
             }
          }
 
          .send {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
 
             img {
                height: 25px;
@@ -329,11 +341,7 @@
 
             button {
                border: none;
-               padding: 8px 10px;
-               color: white;
-               background-color: rgba(10, 10, 247, 0.641);
                cursor: pointer;
-               border-radius: 10px;
             }
          }
          }
