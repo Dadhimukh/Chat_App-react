@@ -12,15 +12,15 @@ const Chat = () => {
         <span>{data.user?.displayName}</span>
         <div className="chatIcon">
           <img
-            src="https://cdn-icons-png.flaticon.com/128/8353/8353783.png"
+            src="https://cdn-icons-png.flaticon.com/128/9187/9187613.png"
             alt="Camera"
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/128/3683/3683218.png"
+            src="https://cdn-icons-png.flaticon.com/128/9187/9187607.png"
             alt="Add friend"
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/128/512/512142.png"
+            src="https://cdn-icons-png.flaticon.com/128/8699/8699984.png"
             alt="More"
           />
         </div>
