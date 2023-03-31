@@ -16,7 +16,7 @@ const Navbar = () => {
           alt=""
         />
         {/* showing the current userName */}
-        <span>{currentUser.displayName}</span>
+        <span className="userName">{currentUser.displayName}</span>
         {/* using Firebase for signOut functionality onClick logout */}
         <button onClick={() => signOut(auth)}>
           {" "}
