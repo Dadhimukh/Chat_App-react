@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* using Firebase for signOut functionality onClick logout */}
         <button onClick={() => signOut(auth)}>
           {" "}
-          <img src="https://cdn-icons-png.flaticon.com/128/4436/4436954.png" />
+          <img src="https://cdn-icons-png.flaticon.com/128/4436/4436954.png" alt="logout"/>
         </button>
       </div>
     </div>
