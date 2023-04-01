@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext.js";
+
 const Search = () => {
   const { currentUser } = useContext(AuthContext);
 
