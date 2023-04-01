@@ -4,8 +4,8 @@ import { AuthContext } from "../context/AuthContext";
 import { auth } from "../firebase";
 
 const Navbar = () => {
-// getting the currentUser from useContaxt
-  const {currentUser} = useContext(AuthContext);
+  // getting the currentUser from useContaxt
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className="navbar">
       <span className="logo">Chat App</span>
@@ -20,7 +20,10 @@ const Navbar = () => {
         {/* using Firebase for signOut functionality onClick logout */}
         <button onClick={() => signOut(auth)}>
           {" "}
-          <img src="https://cdn-icons-png.flaticon.com/128/4436/4436954.png" alt="logout"/>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/4436/4436954.png"
+            alt="logout"
+          />
         </button>
       </div>
     </div>
