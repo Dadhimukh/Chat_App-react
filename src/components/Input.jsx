@@ -9,7 +9,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db, storage } from "../firebase";
-import {v4 as uuid} from "uuid"
+import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
 const Input = () => {
@@ -97,7 +97,10 @@ const Input = () => {
           />
         </label>
         <button onClick={handleSend}>
-          <img src="https://cdn-icons-png.flaticon.com/128/3682/3682321.png" alt="send" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/3682/3682321.png"
+            alt="send"
+          />
         </button>
       </div>
     </div>
